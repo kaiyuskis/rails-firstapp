@@ -1,0 +1,9 @@
+<ul>
+    <% @classrooms.each do |classroom| %>
+        <li><%= classroom.name %><%= classroom.credit %><%= classroom.grade %></li>
+    <% end %>
+</ul>
+<%= link_to(new_classroom_path) do %>
+新規作成
+<% end %>
+

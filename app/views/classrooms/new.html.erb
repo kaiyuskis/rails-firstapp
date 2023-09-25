@@ -1,0 +1,9 @@
+<%= form_with model:@classroom, url: classrooms_path do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+    <%= f.label :credit %>
+    <%= f.text_field :credit %>
+    <%= f.label :grade %>
+    <%= f.select :grade, Classroom.grades.keys %>
+    <%= f.submit %>
+<% end %>
