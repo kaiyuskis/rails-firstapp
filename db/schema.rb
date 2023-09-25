@@ -10,10 +10,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_07_27_090756) do
+ActiveRecord::Schema[7.0].define(version: 2023_09_25_061607) do
   create_table "blogs", charset: "utf8", force: :cascade do |t|
     t.string "title"
     t.text "content"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "courses", charset: "utf8", force: :cascade do |t|
+    t.string "name"
+    t.integer "credit_hours"
+    t.string "grade"
+    t.bigint "student_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["student_id"], name: "index_courses_on_student_id"
+  end
+
+  create_table "students", charset: "utf8", force: :cascade do |t|
+    t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -26,4 +42,5 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_27_090756) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "courses", "students"
 end

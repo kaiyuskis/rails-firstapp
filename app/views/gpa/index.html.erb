@@ -1,8 +1,0 @@
-<h1>GPA計算機</h1>
-<ul>
-	<% @gpas.each do |gpa| %>
-		<li>科目名/単位数/成績: <%= gpa.subject %> / <%= gpa.unit %> / <%= gpa.grade %></li>
-	<% end %>
-</ul>
-<%= link_to '追加', new_gpa_path %>
-
