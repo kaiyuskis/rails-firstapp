@@ -1,7 +1,7 @@
 class Classroom < ApplicationRecord
 	enum :grade, [:S, :A, :B, :C, :D, :F]
 
-	$grade_point = {
+	$grade_points = {
 		S: 4,
 		A: 3,
 		B: 2,

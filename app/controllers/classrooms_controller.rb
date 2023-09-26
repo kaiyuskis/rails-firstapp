@@ -18,6 +18,6 @@ class ClassroomsController < ApplicationController
 
     private
     def classroom_params
-        params.require(:classroom).permit(:name, :cradit, :grade)
+        params.require(:classroom).permit(:name, :credit, :grade)
     end
 end
