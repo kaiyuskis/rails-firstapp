@@ -7,3 +7,7 @@
     <%= f.select :grade, Classroom.grades.keys %>
     <%= f.submit %>
 <% end %>
+
+<%= link_to(classrooms_path) do %>
+戻る
+<% end %>
